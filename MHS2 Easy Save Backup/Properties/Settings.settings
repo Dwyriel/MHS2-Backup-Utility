@@ -2,14 +2,14 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MHS2_Easy_Save_Backup.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="RemoteFolder" Type="System.String" Scope="User">
+    <Setting Name="RemoteFolderPath" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="BackupFolder" Type="System.String" Scope="User">
+    <Setting Name="BackupFolderPath" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="BackupNumber" Type="System.UInt64" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">1</Value>
     </Setting>
   </Settings>
 </SettingsFile>

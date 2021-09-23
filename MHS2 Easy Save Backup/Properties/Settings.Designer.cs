@@ -26,30 +26,30 @@ namespace MHS2_Easy_Save_Backup.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string RemoteFolder {
+        public string RemoteFolderPath {
             get {
-                return ((string)(this["RemoteFolder"]));
+                return ((string)(this["RemoteFolderPath"]));
             }
             set {
-                this["RemoteFolder"] = value;
+                this["RemoteFolderPath"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string BackupFolder {
+        public string BackupFolderPath {
             get {
-                return ((string)(this["BackupFolder"]));
+                return ((string)(this["BackupFolderPath"]));
             }
             set {
-                this["BackupFolder"] = value;
+                this["BackupFolderPath"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
         public ulong BackupNumber {
             get {
                 return ((ulong)(this["BackupNumber"]));
