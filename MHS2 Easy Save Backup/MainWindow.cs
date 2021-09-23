@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace MHS2_Easy_Save_Backup
+namespace MHS2_Backup_Utility
 {
     public partial class MainWindow : Form
     {

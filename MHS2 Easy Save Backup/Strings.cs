@@ -1,4 +1,4 @@
-﻿namespace MHS2_Easy_Save_Backup
+﻿namespace MHS2_Backup_Utility
 {
     static class Strings
     {

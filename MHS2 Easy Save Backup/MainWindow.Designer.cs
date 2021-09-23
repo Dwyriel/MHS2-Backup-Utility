@@ -1,5 +1,5 @@
 ﻿
-namespace MHS2_Easy_Save_Backup
+namespace MHS2_Backup_Utility
 {
     partial class MainWindow
     {

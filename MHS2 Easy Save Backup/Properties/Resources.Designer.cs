@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MHS2_Easy_Save_Backup.Properties {
+namespace MHS2_Backup_Utility.Properties {
     using System;
     
     
