@@ -58,5 +58,29 @@ namespace MHS2_Easy_Save_Backup.Properties {
                 this["BackupNumber"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point PrevLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["PrevLocation"]));
+            }
+            set {
+                this["PrevLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool isFirstTime {
+            get {
+                return ((bool)(this["isFirstTime"]));
+            }
+            set {
+                this["isFirstTime"] = value;
+            }
+        }
     }
 }

@@ -170,7 +170,9 @@ namespace MHS2_Easy_Save_Backup
             this.Controls.Add(this.BackupBtn);
             this.Controls.Add(this.ChooseRemoteFolderBtn);
             this.Name = "MainWindow";
-            this.Text = "Form1";
+            this.Text = "MHS2 Backup Utility";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

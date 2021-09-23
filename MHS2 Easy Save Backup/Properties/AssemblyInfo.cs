@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MHS2 Easy Save Backup")]
+[assembly: AssemblyTitle("MHS2 Backup Utility")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MHS2 Easy Save Backup")]
+[assembly: AssemblyConfiguration("Release")]
+[assembly: AssemblyCompany("Dwyriel")]
+[assembly: AssemblyProduct("MHS2 Backup Utility")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

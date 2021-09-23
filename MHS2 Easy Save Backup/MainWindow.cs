@@ -35,7 +35,7 @@ namespace MHS2_Easy_Save_Backup
             BackupNumberTxtBox.Text = BackupController.backupNumber.ToString();
         }
 
-        private void HideStatusLabel()
+        private void HideStatusLabelTimer()
         {
             if (timer is null)
             {
@@ -60,7 +60,7 @@ namespace MHS2_Easy_Save_Backup
         {
             StatusLabel.Visible = BackupController.Backup(RemoteFolderTxtBox.Text, BackupFolderTxtBox.Text);
             BackupNumberTxtBox.Text = BackupController.backupNumber.ToString();
-            HideStatusLabel();
+            HideStatusLabelTimer();
         }
 
         private void ChooseRemoteFolderBtn_Click(object sender, EventArgs e)
@@ -78,7 +78,6 @@ namespace MHS2_Easy_Save_Backup
                 return;
             BackupFolderTxtBox.Text = path;
         }
-        #endregion
 
         private void EnableEditCheckBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -98,5 +97,22 @@ namespace MHS2_Easy_Save_Backup
             BackupNumberTxtBox.Focus();
 
         }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.isFirstTime)
+            {
+                Properties.Settings.Default.isFirstTime = false;
+                return;
+            }
+            Location = Properties.Settings.Default.PrevLocation;
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.PrevLocation = Location;
+            Properties.Settings.Default.Save();
+        }
+        #endregion
     }
 }
