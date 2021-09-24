@@ -40,6 +40,8 @@ namespace MHS2_Backup_Utility
             this.BackupNumberTxtBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.EnableEditCheckBox = new System.Windows.Forms.CheckBox();
+            this.DateRadioBtn = new System.Windows.Forms.RadioButton();
+            this.NumberRadioBtn = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // ChooseRemoteFolderBtn
@@ -56,7 +58,7 @@ namespace MHS2_Backup_Utility
             // BackupBtn
             // 
             this.BackupBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackupBtn.Location = new System.Drawing.Point(193, 112);
+            this.BackupBtn.Location = new System.Drawing.Point(12, 112);
             this.BackupBtn.Name = "BackupBtn";
             this.BackupBtn.Size = new System.Drawing.Size(107, 35);
             this.BackupBtn.TabIndex = 1;
@@ -115,7 +117,7 @@ namespace MHS2_Backup_Utility
             // 
             this.StatusLabel.AutoSize = true;
             this.StatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StatusLabel.Location = new System.Drawing.Point(306, 118);
+            this.StatusLabel.Location = new System.Drawing.Point(125, 118);
             this.StatusLabel.Name = "StatusLabel";
             this.StatusLabel.Size = new System.Drawing.Size(66, 24);
             this.StatusLabel.TabIndex = 7;
@@ -125,7 +127,7 @@ namespace MHS2_Backup_Utility
             // BackupNumberTxtBox
             // 
             this.BackupNumberTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackupNumberTxtBox.Location = new System.Drawing.Point(109, 128);
+            this.BackupNumberTxtBox.Location = new System.Drawing.Point(447, 128);
             this.BackupNumberTxtBox.Name = "BackupNumberTxtBox";
             this.BackupNumberTxtBox.ReadOnly = true;
             this.BackupNumberTxtBox.Size = new System.Drawing.Size(41, 21);
@@ -136,7 +138,7 @@ namespace MHS2_Backup_Utility
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 129);
+            this.label1.Location = new System.Drawing.Point(347, 129);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 15);
             this.label1.TabIndex = 9;
@@ -145,7 +147,7 @@ namespace MHS2_Backup_Utility
             // EnableEditCheckBox
             // 
             this.EnableEditCheckBox.AutoSize = true;
-            this.EnableEditCheckBox.Location = new System.Drawing.Point(13, 112);
+            this.EnableEditCheckBox.Location = new System.Drawing.Point(351, 112);
             this.EnableEditCheckBox.Name = "EnableEditCheckBox";
             this.EnableEditCheckBox.Size = new System.Drawing.Size(80, 17);
             this.EnableEditCheckBox.TabIndex = 10;
@@ -153,11 +155,36 @@ namespace MHS2_Backup_Utility
             this.EnableEditCheckBox.UseVisualStyleBackColor = true;
             this.EnableEditCheckBox.CheckedChanged += new System.EventHandler(this.EnableEditCheckBox_CheckedChanged);
             // 
+            // DateRadioBtn
+            // 
+            this.DateRadioBtn.AutoSize = true;
+            this.DateRadioBtn.Location = new System.Drawing.Point(224, 111);
+            this.DateRadioBtn.Name = "DateRadioBtn";
+            this.DateRadioBtn.Size = new System.Drawing.Size(107, 17);
+            this.DateRadioBtn.TabIndex = 11;
+            this.DateRadioBtn.Text = "Use Current Date";
+            this.DateRadioBtn.UseVisualStyleBackColor = true;
+            this.DateRadioBtn.CheckedChanged += new System.EventHandler(this.DateRadioBtn_CheckedChanged);
+            // 
+            // NumberRadioBtn
+            // 
+            this.NumberRadioBtn.AutoSize = true;
+            this.NumberRadioBtn.Checked = true;
+            this.NumberRadioBtn.Location = new System.Drawing.Point(224, 129);
+            this.NumberRadioBtn.Name = "NumberRadioBtn";
+            this.NumberRadioBtn.Size = new System.Drawing.Size(124, 17);
+            this.NumberRadioBtn.TabIndex = 12;
+            this.NumberRadioBtn.TabStop = true;
+            this.NumberRadioBtn.Text = "Use Backup Number";
+            this.NumberRadioBtn.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 152);
+            this.Controls.Add(this.NumberRadioBtn);
+            this.Controls.Add(this.DateRadioBtn);
             this.Controls.Add(this.EnableEditCheckBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BackupNumberTxtBox);
@@ -191,6 +218,8 @@ namespace MHS2_Backup_Utility
         private System.Windows.Forms.TextBox BackupNumberTxtBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox EnableEditCheckBox;
+        private System.Windows.Forms.RadioButton DateRadioBtn;
+        private System.Windows.Forms.RadioButton NumberRadioBtn;
     }
 }
 

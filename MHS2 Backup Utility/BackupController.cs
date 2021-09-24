@@ -55,7 +55,7 @@ namespace MHS2_Backup_Utility
 
         private static string CreateNewFolder(string backupPath)
         {
-            DirectoryInfo dir = Directory.CreateDirectory(backupPath + @"\" + Strings.BackupFolderBaseName + (backupNumber++).ToString());
+            DirectoryInfo dir = Directory.CreateDirectory(backupPath + @"\" + Strings.BackupFolderBaseName + (Properties.Settings.Default.useDate ? DateTime.Now.ToString().Replace("/", "-").Replace(":", ".") : backupNumber++.ToString()));
             return (dir is null || dir.FullName is null) ? null : dir.FullName;
         }
 
@@ -193,6 +193,6 @@ namespace MHS2_Backup_Utility
 
     public enum Backup_Error_Type
     {
-        None, EmptyRemoteFolder, EmptyBackupFolder, RemoteFolderDoesntExist, BackupFolderDoesntExist, NoSaveFilesOnRemoteFolder, 
+        None, EmptyRemoteFolder, EmptyBackupFolder, RemoteFolderDoesntExist, BackupFolderDoesntExist, NoSaveFilesOnRemoteFolder,
     }
 }

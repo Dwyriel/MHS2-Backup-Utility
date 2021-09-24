@@ -33,6 +33,7 @@ namespace MHS2_Backup_Utility
             if (BackupController.backupFolderPath != null && BackupController.backupFolderPath != "")
                 BackupFolderTxtBox.Text = BackupController.backupFolderPath;
             BackupNumberTxtBox.Text = BackupController.backupNumber.ToString();
+            DateRadioBtn.Checked = Properties.Settings.Default.useDate;
         }
 
         private void HideStatusLabelTimer()
@@ -112,6 +113,11 @@ namespace MHS2_Backup_Utility
         {
             Properties.Settings.Default.PrevLocation = Location;
             Properties.Settings.Default.Save();
+        }
+
+        private void DateRadioBtn_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.useDate = DateRadioBtn.Checked;
         }
         #endregion
     }

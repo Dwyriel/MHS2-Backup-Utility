@@ -82,5 +82,17 @@ namespace MHS2_Backup_Utility.Properties {
                 this["isFirstTime"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool useDate {
+            get {
+                return ((bool)(this["useDate"]));
+            }
+            set {
+                this["useDate"] = value;
+            }
+        }
     }
 }
