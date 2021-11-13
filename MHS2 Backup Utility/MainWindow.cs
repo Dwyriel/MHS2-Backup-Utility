@@ -57,6 +57,22 @@ namespace MHS2_Backup_Utility
             timer.Stop();
         }
 
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.isFirstTime)
+            {
+                Properties.Settings.Default.isFirstTime = false;
+                return;
+            }
+            Location = Properties.Settings.Default.PrevLocation;
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.PrevLocation = Location;
+            Properties.Settings.Default.Save();
+        }
+
         private void BackupBtn_Click(object sender, EventArgs e)
         {
             StatusLabel.Visible = BackupController.Backup(RemoteFolderTxtBox.Text, BackupFolderTxtBox.Text);
@@ -97,22 +113,6 @@ namespace MHS2_Backup_Utility
             ErrorLog.ShowErrorText("Backup Number must be a positive number");
             BackupNumberTxtBox.Focus();
 
-        }
-
-        private void MainWindow_Load(object sender, EventArgs e)
-        {
-            if (Properties.Settings.Default.isFirstTime)
-            {
-                Properties.Settings.Default.isFirstTime = false;
-                return;
-            }
-            Location = Properties.Settings.Default.PrevLocation;
-        }
-
-        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Properties.Settings.Default.PrevLocation = Location;
-            Properties.Settings.Default.Save();
         }
 
         private void DateRadioBtn_CheckedChanged(object sender, EventArgs e)
